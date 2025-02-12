@@ -1,0 +1,10 @@
+document.body.addEventListener('click', function(event) {
+    const whale = document.getElementById('whale');
+
+    // คำนวณตำแหน่งที่ต้องการให้ปลาวาฬไป
+    const x = event.clientX - whale.offsetWidth / 2;
+    const y = event.clientY - whale.offsetHeight / 2;
+
+    // เปลี่ยนตำแหน่งของปลาวาฬ
+    whale.style.transform = `translate(${x}px, ${y}px)`;
+});
